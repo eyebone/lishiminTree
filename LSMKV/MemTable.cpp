@@ -9,12 +9,10 @@ using namespace std;
 
 
 MemTable::MemTable() {
-//    this->status = MEMTABLE;
+    this->status = MEMTABLE;
     this->maxLevel = 32;
     this->prob = 0.5;
     this->head = new Node();
-
-//    this->keySet.reserve(1000000);
 }
 
 MemTable::MemTable(int maxL, float p) {
@@ -34,7 +32,6 @@ MemTable::~MemTable() {
 }
 
 bool MemTable::insert(const uint64_t k, const string &v) {
-
     Node *test = search(k);
     if(test != nullptr) {//重复插入则覆盖==
         test->value = v;
@@ -58,8 +55,6 @@ bool MemTable::insert(const uint64_t k, const string &v) {
     }
     delete[] update;
     return true;
-
-
 }
 
 int MemTable::randomLevel() {

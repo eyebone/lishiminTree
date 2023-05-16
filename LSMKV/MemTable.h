@@ -16,6 +16,7 @@ using namespace std;
 
 #define MAXLEVEL 32
 using namespace std;
+
 class Node {
 public:
     uint64_t key;//键
@@ -48,15 +49,17 @@ public:
     }
 };
 
+enum memTable_status {
+    MEMTABLE, IMMUTABLE
+};
 
 class MemTable {
 public:
     Node *head;
     int maxLevel;
     float prob;
-//    memTable_status status;
+    memTable_status status;
 
-//    vector<uint64_t> keySet;
     MemTable(int maxL, float p);
 
     MemTable();
@@ -72,6 +75,7 @@ public:
     bool find(const uint64_t k);
 
     bool remove(const uint64_t k);
+
     void clear();
 };
 

@@ -1,0 +1,14 @@
+//
+// Created by cxt2004 on 2023/5/16.
+//
+
+#ifndef PROJECT_LSMKV_HANDOUT_2023_SSTABLE_H
+#define PROJECT_LSMKV_HANDOUT_2023_SSTABLE_H
+
+
+class SSTable {
+
+};
+
+
+#endif //PROJECT_LSMKV_HANDOUT_2023_SSTABLE_H

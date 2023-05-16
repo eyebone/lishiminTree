@@ -47,10 +47,7 @@ bool KVStore::del(uint64_t key)
  */
 void KVStore::reset()
 {
-    for (auto it = keySet.begin(); it != keySet.end(); it++) {
-        m_table.remove(*it);
-    }
-//    m_table.clear();
+    m_table.clear();
 }
 
 
